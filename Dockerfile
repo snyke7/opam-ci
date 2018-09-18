@@ -2,6 +2,7 @@ FROM debian:stretch
 
 COPY apt-pins/* /etc/apt/preferences.d/
 RUN echo "deb http://httpredir.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
+RUN echo "deb http://httpredir.debian.org/debian/ stretch-backports main" > /etc/apt/sources.list.d/backports.list
 
 RUN apt update -y && apt install -y git m4 time curl linux-perf opam ocaml
 
