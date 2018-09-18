@@ -1,7 +1,0 @@
-Package: opam*
-Pin: release a=unstable
-Pin-Priority: 990
-
-Package: git*
-Pin: release a=stretch-backports
-Pin-Priority: 990

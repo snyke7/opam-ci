@@ -1,10 +1,9 @@
 FROM debian:stretch
 
-COPY apt-pins/* /etc/apt/preferences.d/
-RUN echo "deb http://httpredir.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
-RUN echo "deb http://httpredir.debian.org/debian/ stretch-backports main" > /etc/apt/sources.list.d/backports.list
+COPY apt/ /etc/apt/
+RUN apt update -y && apt install -y git rsync tar unzip m4 time curl linux-perf ocaml build-essential
 
-RUN apt update -y && apt install -y git m4 time curl linux-perf opam ocaml
+RUN curl "https://github.com/ocaml/opam/releases/download/2.0.0/opam-2.0.0-x86_64-linux" -Lo /usr/local/bin/opam && chmod +x /usr/local/bin/opam
 
 RUN useradd ci
 USER ci
