@@ -2,7 +2,7 @@ FROM debian:stretch
 
 # apt configuration and package installation
 COPY apt/ /etc/apt/
-RUN apt update -y && apt install -y git rsync tar unzip m4 time curl linux-perf ocaml build-essential
+RUN apt update -y && apt install -y git rsync tar unzip m4 time curl linux-perf strace ocaml build-essential
 
 # opam installation
 WORKDIR /tmp
