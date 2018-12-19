@@ -5,7 +5,7 @@ COPY apt/ /etc/apt/
 RUN apt update -y && apt install -y git rsync tar unzip m4 time curl linux-perf strace ocaml build-essential
 
 # opam installation
-RUN curl "https://github.com/ocaml/opam/releases/download/2.0.1/opam-2.0.1-x86_64-linux" -Lo /usr/local/bin/opam && chmod +x /usr/local/bin/opam
+RUN curl "https://github.com/ocaml/opam/releases/download/2.0.2/opam-2.0.2-x86_64-linux" -Lo /usr/local/bin/opam && chmod +x /usr/local/bin/opam
 
 # prepare CI environment
 WORKDIR /
