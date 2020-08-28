@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:buster
 
 # apt configuration and package installation
 COPY apt/ /etc/apt/
