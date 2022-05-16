@@ -1,8 +1,7 @@
 # Deep distro in sync with CI builder! We run perf inside the container, needs to work with host kernel.
 FROM debian:buster
 
-# apt configuration and package installation
-COPY apt/ /etc/apt/
+# apt package installation
 # gmp: needed by Coq
 # python: needed by z3 (for RefinedC)
 # mpfr: needed by Cerberus (for RefinedC)
