@@ -10,7 +10,7 @@ COPY apt/ /etc/apt/
 RUN apt update -y && apt install -y pkg-config git rsync tar unzip m4 time curl linux-perf strace ocaml build-essential bubblewrap gawk libgmp-dev python2.7 python3 libmpfr-dev
 
 # opam installation
-RUN curl "https://github.com/ocaml/opam/releases/download/2.0.8/opam-2.0.8-x86_64-linux" -Lo /usr/local/bin/opam && chmod +x /usr/local/bin/opam
+RUN curl "https://github.com/ocaml/opam/releases/download/2.1.1/opam-2.1.1-x86_64-linux" -Lo /usr/local/bin/opam && chmod +x /usr/local/bin/opam
 
 # prepare CI environment
 WORKDIR /
