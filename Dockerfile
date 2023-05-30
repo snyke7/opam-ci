@@ -13,5 +13,5 @@ RUN curl "https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-x86_6
 
 # prepare CI environment
 WORKDIR /
-RUN useradd ci
+RUN useradd -m ci
 USER ci
