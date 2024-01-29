@@ -1,5 +1,5 @@
 # Deep distro in sync with CI builder! We run perf inside the container, needs to work with host kernel.
-FROM debian:bullseye
+FROM debian:bookworm
 
 # apt package installation
 # gmp: needed by Coq
